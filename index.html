@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrel Dodge - Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="game-ui">
+            <div id="score">Score: 0</div>
+            <div id="high-score">High Score: 0</div>
+        </div>
+        
+        <div id="start-screen" class="screen">
+            <h1>Barrel Dodge</h1>
+            <p>Dodge the barrels and survive as long as possible!</p>
+            <button id="start-button">Start Game</button>
+        </div>
+        
+        <div id="game-over-screen" class="screen hidden">
+            <h1>Game Over</h1>
+            <p>Your score: <span id="final-score">0</span></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+        
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <!-- Load scripts in correct order -->
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/utils/collision.js"></script>
+    <script src="js/utils/input.js"></script>
+    <script src="js/entities/road.js"></script>
+    <script src="js/entities/player.js"></script>
+    <script src="js/entities/obstacle.js"></script>
+    <script src="js/renderer/renderer.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
